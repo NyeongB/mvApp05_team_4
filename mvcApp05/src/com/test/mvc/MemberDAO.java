@@ -197,4 +197,40 @@ public class MemberDAO implements IMemberDAO
 		
 	}
 
+	@Override
+	public String login(String id, String pw) throws SQLException
+	{
+		String result =null;
+		
+		Connection conn = dataSource.getConnection();
+		String sql ="SELECT NAME\r\n" + 
+				"FROM MEMBERLIST\r\n" + 
+				"WHERE ID = ? AND PW = CRYPTPACK.ENCRYPT(?, ?)";
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, id);
+		pstmt.setString(2, pw);
+		pstmt.setString(3, pw);
+		
+		ResultSet rs = pstmt.executeQuery();
+		
+		while(rs.next())
+		{
+			result  = rs.getString("NAME");
+		}
+		
+		conn.close();
+		pstmt.close();
+		rs.close();
+		
+		return result;
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+
 }

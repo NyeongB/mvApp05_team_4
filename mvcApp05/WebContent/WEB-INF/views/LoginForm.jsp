@@ -21,7 +21,18 @@ String cp = request.getContextPath();
 }
 </style>
 
+<script type="text/javascript">
 
+	$(document).ready(function()
+	{
+		$(".btnLogin").click(function()
+		{
+			//alert("1");
+			$("#login").submit();
+		});
+	});
+	
+</script>
 
 </head>
 <body>
@@ -34,13 +45,13 @@ String cp = request.getContextPath();
 
 	<div class="col-md-2"></div>
 	<div class="col-md-8">
-		<form action="">
+		<form action="login.action" method="post" id="login" >
 
 
 			<div class="form-group">
 				<label for="id" class="col-sm-2 control-label">ID</label>
 				<div class="col-sm-10">
-					<input type="email" class="form-control" id="id"
+					<input type="text" class="form-control" id="id" name="id"
 						placeholder="아이디를 입력하세요.">
 				</div>
 			</div>
@@ -50,14 +61,14 @@ String cp = request.getContextPath();
 			<div class="form-group">
 				<label for="pw" class="col-sm-2 control-label">비밀번호</label>
 				<div class="col-sm-10">
-					<input type="password" class="form-control" id="pw"
+					<input type="password" class="form-control" id="pw" name="pw"
 						placeholder="패스워드를 입력하세요.">
 				</div>
 			</div>
 
 			<div class="form-group">
 				<div class="col-sm-offset-2 col-sm-10">
-					<button type="submit" class="btn btn-default">로그인</button>
+					<button type="button" class="btn btn-default btnLogin">로그인</button>
 					<button type="reset" class="btn btn-default">취소</button>
 				</div>
 			</div>
