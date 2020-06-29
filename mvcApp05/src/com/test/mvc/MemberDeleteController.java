@@ -6,39 +6,41 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.Controller;
 
-public class MemberRecordUpdateFormController implements Controller
+import com.sun.org.apache.regexp.internal.recompile;
+
+public class MemberDeleteController implements Controller
 {
-	private IMemberRecord dao;
-		
-	public void setDao(IMemberRecord dao)
+	
+	private IMemberDAO memberDAO;
+	
+	
+	
+	
+	public void setMemberDAO(IMemberDAO memberDAO)
 	{
-		this.dao = dao;
+		this.memberDAO = memberDAO;
 	}
+
+
+
 
 	@Override
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
 		ModelAndView mav = new ModelAndView();
-		
-		
+
+		String id = request.getParameter("id");
+		System.out.println(id);
 		try
 		{
-			//MemberRecordForm 으로 부터 수신
-			String id = request.getParameter("id");
-			MemberRecord record = new MemberRecord();
-			record = dao.serachId(id);
-			mav.addObject("record", record);
-			mav.setViewName("MemberRecordUpdateForm");
-			
+			memberDAO.delete(id);
+			mav.setViewName("redirect:memberlist.action");
 		} catch (Exception e)
 		{
 			System.out.println(e.toString());
 		}
 		
-		
-		
-		return mav;
+		return mav; 
 	}
-	
 
 }

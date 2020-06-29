@@ -82,9 +82,30 @@
 		
 	</bean>
 	
+	<!-- 멤버 업데이트 폼 이동 컨트롤러  -->
+	<bean name="/memberupdateform.action" class="com.test.mvc.MemberUpdateFormController">
+		<property name="dao" ref="memberDAO"></property>
+	</bean>
+	
+	<!-- 멤버 업데이트 컨트롤러  -->
+	<bean name="/memberupdate.action" class="com.test.mvc.MemberUpdateController">
+		<property name="dao" ref="memberDAO"></property>
+	</bean>
+	
+	
 	<!--성적 수정 폼 Controller  -->
 	<bean name="/memberrecordupdateform.action" class="com.test.mvc.MemberRecordUpdateFormController">
 		<property name="dao" ref="memberRecordDAO"></property>
+	</bean>
+	
+	<!-- 성적 수정 Controller  -->
+	<bean name="/recordupdate.action" class="com.test.mvc.MemberRecordUpdateController">
+		<property name="dao" ref="memberRecordDAO"></property>
+	</bean>
+
+<!-- 멤버 삭제 컨트롤러 -->
+	<bean name="/memberdelete.action" class="com.test.mvc.MemberDeleteController">
+		<property name="memberDAO" ref="memberDAO"></property>
 	</bean>
 
 	

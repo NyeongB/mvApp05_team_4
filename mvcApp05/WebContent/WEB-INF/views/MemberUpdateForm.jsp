@@ -11,6 +11,28 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" type ="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="<%=cp%>/css/bootstrap.min.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript" src="<%=cp%>/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+
+	$(function()
+	{
+		$(".updateBtn").click(function()
+		{
+			$("#updateForm").submit();
+			
+			
+			
+		});	
+		
+	});
+
+
+
+
+</script>
 
 </head>
 <body>
@@ -32,12 +54,12 @@
 				<h3> 학생정보수정 </h3>							
 			</div>
 			<div class="form-group">
-			<form action="">
-				아이디<input type="text" class="form-control"/>
-				패스워드<input type="password" class="form-control"/>
-				이름<input type="text" class="form-control"/>
-				전화번호<input type="tel" class="form-control"/>
-				이메일<input type="email" class="form-control"/>
+			<form action="memberupdate.action" id="updateForm">
+				아이디<input type="text" class="form-control" name="id" readonly value="${member.id }"/>
+				패스워드<input type="password" class="form-control" name="pw" value="${member.pw }"/>
+				이름<input type="text" class="form-control" name="name" value="${member.name }"/>
+				전화번호<input type="tel" class="form-control" name="tel" value="${member.tel }"/>
+				이메일<input type="email" class="form-control" name="email" value="${member.email }"/>
 				<br />
 			</form>	
 
