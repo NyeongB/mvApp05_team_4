@@ -27,7 +27,8 @@
 		$(".recordDelete").click(function() 
 		{
 			//alert("확인");
-			alert($(this).val());
+			//alert($(this).val());
+			$(location).attr("href", "memberdelete.action?id=" +$(this).val());
 					
 		});
 		
