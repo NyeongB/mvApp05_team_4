@@ -11,5 +11,5 @@ public interface IMemberDAO
 	public int delete(String id) throws SQLException;
 	public int modify(Member member) throws SQLException;
 	public Member serachId(String id) throws SQLException;
-	
+	public String login(String id, String pw) throws SQLException;
 }

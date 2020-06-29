@@ -67,7 +67,20 @@
 		<property name="dao" ref="memberDAO"></property>
 	</bean>
 	
-
+	<bean name="/memberrecord.action" class="com.test.mvc.MemberRecordController">
+		<property name="dao" ref="memberDAO"></property>
+	</bean>
+	
+		<bean name="/loginform.action" class="com.test.mvc.MemberLogionFormController">	
+	</bean>
+	
+	<bean name="/login.action" class="com.test.mvc.LoginController">	
+		<property name="memberDAO" ref="memberDAO"></property>
+	</bean>
+	
+	<bean name="/logout.action" class="com.test.mvc.LogoutController">	
+		
+	</bean>
 
 </beans>
 

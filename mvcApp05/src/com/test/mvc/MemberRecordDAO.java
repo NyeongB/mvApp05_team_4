@@ -12,11 +12,13 @@ public class MemberRecordDAO implements IMemberRecord
 {
 	private DataSource dataSource;
 
-	public DataSource getDataSource()
-	{
-		return dataSource;
-	}
 	
+	
+	public void setDataSource(DataSource dataSource)
+	{
+		this.dataSource = dataSource;
+	}
+
 	public ArrayList<MemberRecord> lists() throws SQLException
 	{
 		Connection conn = dataSource.getConnection();
