@@ -22,11 +22,13 @@
 		$(".updateBtn").click(function()
 		{
 			$("#updateForm").submit();
-			
-			
+				
+		});	
+		$(".cancleBtn").click(function()
+		{
+			location.href= "memberlist.action";
 			
 		});	
-		
 	});
 
 
@@ -72,7 +74,7 @@
 				
 				</div>
 				<div class="col-md-4">
-					<button type="button" class="form-control btn-info deleteBtn">삭제</button>	
+					<button type="button" class="form-control btn-info cancleBtn">취소</button>	
 				</div>
 				<div class="col-md-2"></div>
 				<br />

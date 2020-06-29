@@ -11,6 +11,37 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" type ="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css"
+	href="<%=cp%>/css/bootstrap.min.css">
+<script type="text/javascript"
+	src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript" src="<%=cp%>/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(function()
+	{
+		$(".jungbok").click(function()
+		{
+			
+			
+			
+			
+			
+			
+		});
+		
+		
+		
+		
+	});
+	
+	
+
+
+</script>
+
+	
 
 </head>
 <body>
@@ -33,11 +64,15 @@
 				<h3> 학생추가 </h3>							
 			</div>
 			
-				<form action="memberadd.action" class="form-inline">
-				<div class="form-group">
-					아이디  <input type="text" name="id" class="form-control " />
-					<button type="button" class="form-control" >중복확인</button>
+				<form action="memberadd.action" class="form">
+				
+				<div class="input-group">
+					아이디  <input type="text" name="id" class="form-control" />
+					<div class="input-group-append">
+						<button type="button" class="form-control btn-info jungbok" >중복확인</button>
+					</div>
 				</div>
+				
 				<div class="form-group">
 					패스워드  <input type="text"  name="pw" class="form-control" />
 				</div>
