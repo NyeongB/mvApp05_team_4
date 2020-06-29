@@ -9,5 +9,5 @@ public interface IMemberRecord
 	public int add(MemberRecord record) throws SQLException;
 	public int delete(String id) throws SQLException;
 	public int modify(MemberRecord record) throws SQLException;
-
+	public MemberRecord serachId(String id) throws SQLException;
 }

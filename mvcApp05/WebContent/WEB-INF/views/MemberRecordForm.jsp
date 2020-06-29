@@ -19,14 +19,16 @@
 		$("#recordModify").click(function() 
 		{
 			//alert("확인");
-			alert($(this).val());
+			//alert($(this).val());
+			$(location).attr("href","memberrecordupdateform.action?id=" + $(this).val());
 			
 		});
 		
 		$("#recordDelete").click(function() 
 		{
 			//alert("확인");
-			alert($(this).val());
+			//alert($(this).val());
+			$(location).attr("href", "memberdelete.action?id=" +$(this).val());
 					
 		});
 		
@@ -93,12 +95,6 @@
 								</tr>
 								</c:forEach>
 							
-								
-							
-								
-								
-								
-								
 								
 							</table>
 							
