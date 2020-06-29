@@ -110,7 +110,7 @@
 
 	
 	<!-- 성적 삭제 Controller -->
-	<bean name="/memberdelete.action" class="com.test.mvc.MemberRecordDeleteController">
+	<bean name="/memberrecorddelete.action" class="com.test.mvc.MemberRecordDeleteController">
 		<property name="dao" ref="memberRecordDAO"></property>
 	</bean>
 

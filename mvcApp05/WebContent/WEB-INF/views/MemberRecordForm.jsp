@@ -28,7 +28,7 @@
 		{
 			//alert("확인");
 			//alert($(this).val());
-			$(location).attr("href", "memberdelete.action?id=" + $(this).val());
+			$(location).attr("href", "memberrecorddelete.action?id=" + $(this).val());
 					
 		});
 		
