@@ -32,13 +32,14 @@
 				<h3> 학생정보수정 </h3>							
 			</div>
 			<div class="form-group">
+			<form action="">
 				아이디<input type="text" class="form-control"/>
 				패스워드<input type="password" class="form-control"/>
 				이름<input type="text" class="form-control"/>
 				전화번호<input type="tel" class="form-control"/>
 				이메일<input type="email" class="form-control"/>
 				<br />
-				
+			</form>	
 
 			</div>
 			<div class="form-group">
