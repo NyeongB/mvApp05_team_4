@@ -22,6 +22,7 @@ public class MemberRecordUpdateFormController implements Controller
 		
 		//MemberRecordForm 으로 부터 수신
 		
+		
 		return mav;
 	}
 	
