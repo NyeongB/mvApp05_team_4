@@ -14,7 +14,11 @@
 
 <style type="text/css">
 
+	.login
+	{
+		
 	
+	}
 
 
 	.content
@@ -36,7 +40,7 @@
 	
 	<div class="contet">
 		<div>
-			<jsp:include page="Header.jsp"></jsp:include>
+			<jsp:include page="LoginForm.jsp"></jsp:include>
 		</div>
 	
 	</div>

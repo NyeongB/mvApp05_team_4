@@ -33,6 +33,10 @@
 						<div class="col-md-2">
 						</div>
 						<div class="col-md-8">
+							<div>
+								<h3> 전체 학생 리스트 </h3>
+							
+							</div>
 							<table class="table table-striped">
 								<tr>
 									<th>아이디</th>
@@ -45,6 +49,42 @@
 									<th>수학점수</th>
 									<th>총점</th>
 									<th>평균</th>
+								</tr>
+								<tr>
+									<td>superman</td>
+									<td>*******</td>
+									<td>김동휘</td>
+									<td>010-2370-5421</td>
+									<td>dnehd1828@gmail.com</td>
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									<td>300</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td>superman</td>
+									<td>*******</td>
+									<td>김동휘</td>
+									<td>010-2370-5421</td>
+									<td>dnehd1828@gmail.com</td>
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									<td>300</td>
+									<td>100</td>
+								</tr>
+								<tr>
+									<td>superman</td>
+									<td>*******</td>
+									<td>김동휘</td>
+									<td>010-2370-5421</td>
+									<td>dnehd1828@gmail.com</td>
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									<td>300</td>
+									<td>100</td>
 								</tr>
 								<tr>
 									<td>superman</td>
