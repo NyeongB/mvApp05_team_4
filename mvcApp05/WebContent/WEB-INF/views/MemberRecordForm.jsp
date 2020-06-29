@@ -28,6 +28,9 @@
 						<div class="col-md-2">
 						</div>
 						<div class="col-md-8">
+							<div><h3>성적관리</h3></div>
+							<div><button type="button" class="form-control btn-info addBtn">추가</button></div>
+							<br />
 							<table class="table table-striped">
 								<tr>
 									<th>번호</th>

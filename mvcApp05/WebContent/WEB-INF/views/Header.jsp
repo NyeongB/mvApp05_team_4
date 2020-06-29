@@ -72,13 +72,13 @@
 		</div>
 		<div class="nav">
 			<ul class="nav_list">
-				<li><a>전체 학생 리스트</a></li>
-				<li><a>학생관리</a></li>
-				<li><a>성적관리</a></li>
+				<li><a href="membertotallist.action">전체 학생 리스트</a></li>
+				<li><a href="memberlist.action">학생관리</a></li>
+				<li><a href="memberrecord.action">성적관리</a></li>
 			</ul>
 		</div>
 		<div class="login">
-			<span>로그인</span>
+			<a href="login.action"><span>로그인</span></a>
 		</div>
 	
 	</div>

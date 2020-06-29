@@ -31,6 +31,8 @@
 			<div>
 				<h3> 학생관리 </h3>							
 			</div>
+			<div><button type="button" class="form-control btn-info addBtn">추가</button></div>
+			<br />
 			<table class="table table-striped">
 				<tr>
 					<th>아이디</th>

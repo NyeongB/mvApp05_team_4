@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.Controller;
 
-public class MemberListController implements Controller
+public class MemberTotalListController implements Controller
 {
 	private IMemberDAO memberDAO;
 	

@@ -48,7 +48,7 @@
 		<property name ="dataSource" ref="localDataSource"></property>
 	</bean> -->
 	
-	<bean name="/memberlist.action" class="com.test.mvc.MemberListController">
+	<bean name="/membertotallist.action" class="com.test.mvc.MemberTotalListController">
 		<property name="memberDAO" ref="memberDAO"></property>
 	</bean>
 	
