@@ -24,7 +24,7 @@
 		margin:0px;
 	
 	}
-	.header
+	.footer
 	{
 		display: flex;
 		justify-content: space-around;
@@ -35,26 +35,8 @@
 		height: 80px;
 	
 	}
-	.nav_list
-	{
-		list-style: none;
-		display: flex;
 
-	
-	}
-	.nav_list a
-	{
-		padding: 10px;
-
-	
-	}
-	
-	.logo span
-	{
-		font-weight: bold;
-	
-	}
-	.header *
+	.footer *
 	{
 		color:white;
 	
@@ -65,19 +47,13 @@
 </head>
 <body>
 
-	<div class="header">
+	<div class="footer">
 	
-		<div class="logo">
-			<span>성적관리 시스템</span>
-		</div>
-		<div class="nav">
-			<ul class="nav_list">
-				<li><a>학생관리</a></li>
-				<li><a>성적관리</a></li>
-			</ul>
-		</div>
-		<div class="login">
-			<span>로그인</span>
+		
+		<div class="footer_list">
+			
+				<span>@banana corp.</span>
+			
 		</div>
 	
 	</div>
