@@ -28,7 +28,12 @@
 		{
 			//alert("확인");
 			//alert($(this).val());
+			
+			if(confirm("정말 삭제하시겠습니까?"))
+			
 			$(location).attr("href", "memberrecorddelete.action?id=" + $(this).val());
+			
+			
 					
 		});
 		

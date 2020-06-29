@@ -29,13 +29,12 @@ public class MemberRecordDeleteController implements Controller
 		
 		String id = request.getParameter("id");
 		
-		HttpSession session = request.getSession();
-		
-		if(session.getAttribute("name")==null)
-		{
-			mav.setViewName("redirect:loginform.action");
-			return mav;
-		}
+		/*
+		 * HttpSession session = request.getSession();
+		 * 
+		 * if(session.getAttribute("name")==null) {
+		 * mav.setViewName("redirect:loginform.action"); return mav; }
+		 */
 		
 		
 		try
