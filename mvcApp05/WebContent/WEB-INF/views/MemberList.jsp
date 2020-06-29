@@ -71,7 +71,7 @@
 			<div>
 				<h3> 학생 관리 </h3>							
 			</div>
-			<div><button type="button" class="form-control btn-info addBtn">추가</button></div>
+			
 			<br />
 			<table class="table table-striped">
 				<tr>
@@ -96,7 +96,7 @@
 					</tr>
 				</c:forEach>
 			</table>
-			
+		<div><button type="button" class="form-control btn-info addBtn">추가</button><br></div>
 		</div>
 			
 		<div class="col-md-2">

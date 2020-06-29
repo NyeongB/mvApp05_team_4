@@ -35,7 +35,7 @@
 						<div class="col-md-8">
 							<div>
 								<h3> 전체 학생 리스트 </h3>
-							
+								<br>
 							</div>
 							<table class="table table-striped">
 								<tr>
