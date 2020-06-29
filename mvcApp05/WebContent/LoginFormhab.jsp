@@ -35,8 +35,9 @@
 	
 	
 	<div class="contet">
-		123
-	
+		<div>
+			<jsp:include page="Header.jsp"></jsp:include>
+		</div>
 	
 	</div>
 	
