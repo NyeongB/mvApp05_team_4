@@ -25,13 +25,20 @@
 		
 		$(".addBtn").click(function()
 		{
-			alert("1");
+			//alert("1");
 			//location.href ='/mvcApp05/WEB-INF/views/MemberAddForm.jsp';
 			location.href ='memberaddform.action';
 			//$(location).attr("href","MemberAddForm.jsp")
 			
 			
 		});	
+		$(".updateBtn").click(function()
+		{
+			
+			//alert($(this).val());
+			
+			
+		});
 		
 		
 	});
@@ -77,7 +84,7 @@
 						<td>${member.name }</td>
 						<td>${member.tel }</td>
 						<td>${member.email }</td>
-						<td><button type="button" class="form-control btn-info updateBtn">수정</button></td>
+						<td><button type="button" class="form-control btn-info updateBtn" id="Btn"value="${member.id }">수정</button></td>
 						<td><button type="button" class="form-control btn-info deleteBtn">삭제</button></td>
 					</tr>
 				</c:forEach>
