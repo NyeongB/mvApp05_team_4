@@ -25,6 +25,10 @@ public class MemberRecordUpdateController implements Controller
 		String kor = request.getParameter("kor");
 		String eng = request.getParameter("eng");
 		String mat = request.getParameter("mat");
+		System.out.println(id);
+		System.out.println(kor);
+		System.out.println(eng);
+		System.out.println(mat);
 		
 		try
 		{

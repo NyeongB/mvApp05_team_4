@@ -22,11 +22,13 @@
 		$(".updateBtn").click(function()
 		{
 			$("#updateForm").submit();
-			
-			
+				
+		});	
+		$(".cancleBtn").click(function()
+		{
+			location.href= "memberlist.action";
 			
 		});	
-		
 	});
 
 
@@ -56,7 +58,7 @@
 			<div class="form-group">
 			<form action="memberupdate.action" id="updateForm">
 				아이디<input type="text" class="form-control" name="id" readonly value="${member.id }"/>
-				패스워드<input type="password" class="form-control" name="pw" value="${member.pw }"/>
+				패스워드<input type="password" class="form-control" name="pw" />
 				이름<input type="text" class="form-control" name="name" value="${member.name }"/>
 				전화번호<input type="tel" class="form-control" name="tel" value="${member.tel }"/>
 				이메일<input type="email" class="form-control" name="email" value="${member.email }"/>
@@ -72,7 +74,7 @@
 				
 				</div>
 				<div class="col-md-4">
-					<button type="button" class="form-control btn-info deleteBtn">삭제</button>	
+					<button type="button" class="form-control btn-info cancleBtn">취소</button>	
 				</div>
 				<div class="col-md-2"></div>
 				<br />
