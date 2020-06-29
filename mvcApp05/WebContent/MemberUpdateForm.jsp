@@ -32,14 +32,17 @@
 				<h3> 학생정보수정 </h3>							
 			</div>
 			<div class="form-group">
-				아이디<input type="text" class=""/>
-				패스워드<input type="password" />
-				이름<input type="text" />
-				전화번호<input type="tel" />
-				이메일<input type="email" />
+				아이디<input type="text" class="form-control"/>
+				패스워드<input type="password" class="form-control"/>
+				이름<input type="text" class="form-control"/>
+				전화번호<input type="tel" class="form-control"/>
+				이메일<input type="email" class="form-control"/>
+				<br />
 				<button type="button" class="form-control btn-info updateBtn">수정</button>
-				<button type="button" class="form-control btn-info deleteBtn">삭제</button>
-			</div>			
+				<button type="button" class="form-control btn-info deleteBtn">삭제</button>	
+
+			</div>		
+
 				
 					
 		
