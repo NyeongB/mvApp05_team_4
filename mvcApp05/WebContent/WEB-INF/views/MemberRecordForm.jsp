@@ -16,14 +16,15 @@
 	$().ready(function() 
 	{
 		
-		$("#recordModify").click(function() 
+		$(".recordModify").click(function() 
 		{
 			//alert("확인");
-			alert($(this).val());
+			//alert($(this).val());
+			$(location).attr("href","memberrecordupdateform.action?id=" + $(this).val());
 			
 		});
 		
-		$("#recordDelete").click(function() 
+		$(".recordDelete").click(function() 
 		{
 			//alert("확인");
 			alert($(this).val());
@@ -56,9 +57,7 @@
 						<div class="col-md-8">
 							<div><h3>성적관리</h3></div>
 						
-							<br />
-							<form action="">
-							
+							<br />	
 								<table class="table table-striped">
 								<tr>
 									<th>ID</th>
@@ -86,25 +85,16 @@
 									<td>${member.avg }</td>
 							
 																
-								<td><button type="button" class="btn btn-default" id="recordModify" value="${member.id }">수정</button></td>
-								<td><button type="button" class="btn btn-default" id="recordDelete" value="${member.id }">삭제</button></td>
+								<td><button type="button" class="btn btn-default recordModify"  value="${member.id }">수정</button></td>
+								<td><button type="button" class="btn btn-default recordDelete"  value="${member.id }">삭제</button></td>
 									
 									
 								</tr>
 								</c:forEach>
-							
-								
-							
-								
-								
-								
-								
-								
+						
 							</table>
 							
-							</form>
-							
-											
+				
 						</div>
 						<div class="col-md-2">
 						</div>
