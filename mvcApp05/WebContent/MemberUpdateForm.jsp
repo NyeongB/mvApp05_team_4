@@ -38,15 +38,25 @@
 				전화번호<input type="tel" class="form-control"/>
 				이메일<input type="email" class="form-control"/>
 				<br />
-				<button type="button" class="form-control btn-info updateBtn">수정</button>
-				<button type="button" class="form-control btn-info deleteBtn">삭제</button>	
-
-			</div>		
-
 				
+
+			</div>
+			<div class="form-group">
+			
+				<div class="col-md-2"></div>
+				<div class="col-md-4">
+					<button type="button" class="form-control btn-info updateBtn">수정</button>
+				
+				</div>
+				<div class="col-md-4">
+					<button type="button" class="form-control btn-info deleteBtn">삭제</button>	
+				</div>
+				<div class="col-md-2"></div>
+				<br />
 					
 		
 		</div>
+		<br />
 			
 		<div class="col-md-2">
 		</div>
