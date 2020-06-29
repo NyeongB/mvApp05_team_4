@@ -33,12 +33,24 @@
 				<h3> 학생추가 </h3>							
 			</div>
 			
-				<form action="memberadd.action">
-					아이디  <input type="text" name="id" class="form-control" />
+				<form action="memberadd.action" class="form-inline">
+				<div class="form-group">
+					아이디  <input type="text" name="id" class="form-control " />
+					<button type="button" class="form-control" >중복확인</button>
+				</div>
+				<div class="form-group">
 					패스워드  <input type="text"  name="pw" class="form-control" />
+				</div>
+				<div class="form-group">
 					이름  <input type="text"  name="name" class="form-control" />
+				</div>
+				<div class="form-group">
 					전화번호  <input type="tel" name="tel" class="form-control" />
+				</div>
+				<div class="form-group">
 					이메일  <input type="email" name="email" class="form-control" />
+				</div>				
+					
 					<br /><br />
 					<button type="submit" class="form-control btn-info addBtn">추가</button>
 					<button type="button" class="form-control btn-info cancelBtn">취소</button>

@@ -36,12 +36,15 @@
 		{
 			
 			//alert($(this).val());
+			location.href='memberupdateform.action?id=' + $(this).val();
 			
 			
 		});
 		$(".deleteBtn").click(function()
 		{
-			alert("1");
+			//alert("1");
+			if(confirm("정말 삭제하시겠습니까?"))
+			$(location).attr("href","memberdelete.action?id="+$(this).val())
 		});
 		
 		
@@ -89,7 +92,7 @@
 						<td>${member.tel }</td>
 						<td>${member.email }</td>
 						<td><button type="button" class="form-control btn-info updateBtn" id="Btn"value="${member.id }">수정</button></td>
-						<td><button type="button" class="form-control btn-info deleteBtn">삭제</button></td>
+						<td><button type="button" class="form-control btn-info deleteBtn" value="${member.id }">삭제</button></td>
 					</tr>
 				</c:forEach>
 			</table>
