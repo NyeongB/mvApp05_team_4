@@ -20,7 +20,21 @@ public class MemberRecordUpdateFormController implements Controller
 	{
 		ModelAndView mav = new ModelAndView();
 		
-		//MemberRecordForm 으로 부터 수신
+		
+		try
+		{
+			//MemberRecordForm 으로 부터 수신
+			String id = request.getParameter("id");
+			MemberRecord record = new MemberRecord();
+			record = dao.serachId(id);
+			mav.addObject("record", record);
+			mav.setViewName("MemberRecordUpdateForm");
+			
+		} catch (Exception e)
+		{
+			System.out.println(e.toString());
+		}
+		
 		
 		
 		return mav;

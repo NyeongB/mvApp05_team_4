@@ -16,7 +16,7 @@
 	$().ready(function() 
 	{
 		
-		$("#recordModify").click(function() 
+		$(".recordModify").click(function() 
 		{
 			//alert("확인");
 			//alert($(this).val());
@@ -24,7 +24,7 @@
 			
 		});
 		
-		$("#recordDelete").click(function() 
+		$(".recordDelete").click(function() 
 		{
 			//alert("확인");
 			//alert($(this).val());
@@ -88,8 +88,8 @@
 									<td>${member.avg }</td>
 							
 																
-								<td><button type="button" class="btn btn-default" id="recordModify" value="${member.id }">수정</button></td>
-								<td><button type="button" class="btn btn-default" id="recordDelete" value="${member.id }">삭제</button></td>
+								<td><button type="button" class="btn btn-default recordModify"  value="${member.id }">수정</button></td>
+								<td><button type="button" class="btn btn-default recordDelete"  value="${member.id }">삭제</button></td>
 									
 									
 								</tr>

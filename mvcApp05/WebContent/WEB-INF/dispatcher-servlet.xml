@@ -87,6 +87,10 @@
 		<property name="dao" ref="memberRecordDAO"></property>
 	</bean>
 
+	<!-- 성적 수정 Controller  -->
+	<bean name="/recordupdate.action" class="com.test.mvc.MemberRecordUpdateController">
+		<property name="dao" ref="memberRecordDAO"></property>
+	</bean>
 </beans>
 
 
