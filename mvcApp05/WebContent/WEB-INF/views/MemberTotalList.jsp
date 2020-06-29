@@ -50,54 +50,21 @@
 									<th>총점</th>
 									<th>평균</th>
 								</tr>
+								
+								<c:forEach var="member" items="${memberList }">
 								<tr>
-									<td>superman</td>
-									<td>*******</td>
-									<td>김동휘</td>
-									<td>010-2370-5421</td>
-									<td>dnehd1828@gmail.com</td>
-									<td>100</td>
-									<td>100</td>
-									<td>100</td>
-									<td>300</td>
-									<td>100</td>
+									<td>${member.id }</td>
+									<td>${member.pw }</td>
+									<td>${member.name }</td>
+									<td>${member.tel }</td>
+									<td>${member.email }</td>
+									<td>${member.kor }</td>
+									<td>${member.eng }</td>
+									<td>${member.mat }</td>
+									<td>${member.tot }</td>
+									<td>${member.avg }</td>
 								</tr>
-								<tr>
-									<td>superman</td>
-									<td>*******</td>
-									<td>김동휘</td>
-									<td>010-2370-5421</td>
-									<td>dnehd1828@gmail.com</td>
-									<td>100</td>
-									<td>100</td>
-									<td>100</td>
-									<td>300</td>
-									<td>100</td>
-								</tr>
-								<tr>
-									<td>superman</td>
-									<td>*******</td>
-									<td>김동휘</td>
-									<td>010-2370-5421</td>
-									<td>dnehd1828@gmail.com</td>
-									<td>100</td>
-									<td>100</td>
-									<td>100</td>
-									<td>300</td>
-									<td>100</td>
-								</tr>
-								<tr>
-									<td>superman</td>
-									<td>*******</td>
-									<td>김동휘</td>
-									<td>010-2370-5421</td>
-									<td>dnehd1828@gmail.com</td>
-									<td>100</td>
-									<td>100</td>
-									<td>100</td>
-									<td>300</td>
-									<td>100</td>
-								</tr>
+								</c:forEach>
 							</table>
 											
 						</div>
@@ -110,10 +77,10 @@
 	
 	</div>
 	
+
 	<div>
 		<jsp:include page="footer.jsp"></jsp:include>
 	</div>
-	
 	
 	
 	
