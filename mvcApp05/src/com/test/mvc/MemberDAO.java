@@ -60,6 +60,44 @@ public class MemberDAO implements IMemberDAO
 		
 		return result;
 	}
+	
+	@Override
+	public ArrayList<Member> list() throws SQLException
+	{	
+		// 결과값 반환 변수 
+		ArrayList<Member> result = new ArrayList<Member>();
+		
+		// 커넥션 
+		Connection conn = dataSource.getConnection();
+		
+		// 쿼리문 구성
+		String sql = "SELECT ID, PW, NAME, TEL, EMAIL  FROM MEMBERLIST_VIEW";
+		
+		// sql 실행 
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		ResultSet rs = pstmt.executeQuery();
+		
+		while(rs.next())
+		{
+			Member member = new Member();
+			member.setId(rs.getString("ID"));
+			member.setPw(rs.getString("PW"));
+			member.setName(rs.getString("NAME"));
+			member.setTel(rs.getString("TEL"));
+			member.setEmail(rs.getString("EMAIL"));
+
+			result.add(member);
+			
+			
+		}
+		
+		rs.close();
+		pstmt.close();
+		conn.close();
+		
+		
+		return result;
+	}
 
 	@Override
 	public int add(Member member) throws SQLException
@@ -67,15 +105,19 @@ public class MemberDAO implements IMemberDAO
 		
 		// 결과값 반환 변수 
 		int result = 0;
+		int result2=0;
+		int su=0;
 		
 		// 커넥션 
 		Connection conn = dataSource.getConnection();
 		
 		// 쿼리문 구성
 		String sql = "INSERT INTO MEMBERLIST(ID, PW, NAME, TEL, EMAIL) VALUES(?, CRYPTPACK.ENCRYPT(?, ?), ?, ?, ?)";
+		String sql2="INSERT INTO MEMBERRECORD(KOR, ENG, MAT, ID) VALUES(?, ?, ?, ?)";
 		
 		// sql 실행 
 		PreparedStatement pstmt = conn.prepareStatement(sql);
+		PreparedStatement pstmt2 = conn.prepareStatement(sql2);
 		
 		pstmt.setString(1, member.getId());
 		pstmt.setString(2, member.getPw());
@@ -85,6 +127,16 @@ public class MemberDAO implements IMemberDAO
 		pstmt.setString(6, member.getEmail());
 		
 		result = pstmt.executeUpdate();
+		
+		
+		
+		pstmt2.setInt(1, su);
+		pstmt2.setInt(2, su);
+		pstmt2.setInt(3, su);
+		pstmt2.setString(4, member.getId());
+	
+		
+		result2 = pstmt2.executeUpdate();
 		
 		// 연결 종료
 		pstmt.close();

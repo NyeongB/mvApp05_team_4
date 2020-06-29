@@ -53,6 +53,7 @@
 				</div>
 				<div class="col-md-2"></div>
 				<br />
+			</div>
 					
 		
 		</div>

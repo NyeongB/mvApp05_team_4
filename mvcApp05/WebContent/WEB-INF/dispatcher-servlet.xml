@@ -43,7 +43,7 @@
 		<property name ="dataSource" ref="localDataSource"></property>
 	</bean>
 	
-	<!-- 멤버 레코드 DAO -->
+	<!-- 토탈 멤버 레코드 DAO -->
 	<!-- <bean id="memberRecordDAO" class="com.test.mvc.MemberRecordDAO">
 		<property name ="dataSource" ref="localDataSource"></property>
 	</bean> -->
@@ -52,8 +52,22 @@
 		<property name="memberDAO" ref="memberDAO"></property>
 	</bean>
 	
+	<!-- 멤버 리스트  Controller   -->
+	<bean name="/memberlist.action" class="com.test.mvc.MemberListController">
+		<property name="dao" ref="memberDAO"></property>
+	</bean>
 	
+	<!-- 멤버 추가 폼  Controller  -->
+	<bean name="/memberaddform.action" class="com.test.mvc.MemberAddFormController">
+		<property name="dao" ref="memberDAO"></property>
+	</bean>
 	
+	<!-- 멤버 추가   Controller  -->
+	<bean name="/memberadd.action" class="com.test.mvc.MemberAddController">
+		<property name="dao" ref="memberDAO"></property>
+	</bean>
+	
+
 
 </beans>
 
