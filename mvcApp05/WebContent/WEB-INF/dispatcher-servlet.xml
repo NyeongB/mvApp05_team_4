@@ -44,9 +44,9 @@
 	</bean>
 	
 	<!-- 토탈 멤버 레코드 DAO -->
-	<!-- <bean id="memberRecordDAO" class="com.test.mvc.MemberRecordDAO">
+	<bean id="memberRecordDAO" class="com.test.mvc.MemberRecordDAO">
 		<property name ="dataSource" ref="localDataSource"></property>
-	</bean> -->
+	</bean> 
 	
 	<bean name="/membertotallist.action" class="com.test.mvc.MemberTotalListController">
 		<property name="memberDAO" ref="memberDAO"></property>
@@ -83,8 +83,8 @@
 	</bean>
 	
 	<!--성적 수정 폼 Controller  -->
-	<bean name="/memberrecordupdateform.action" class="com.test.MemberRecordUpdateController">
-		<property name="dao" ref="memberDAO"></property>
+	<bean name="/memberrecordupdateform.action" class="com.test.MemberRecordUpdateFormController">
+		<property name="dao" ref="memberRecordDAO"></property>
 	</bean>
 
 </beans>
