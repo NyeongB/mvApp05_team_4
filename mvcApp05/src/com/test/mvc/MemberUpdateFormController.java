@@ -6,25 +6,38 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.Controller;
 
-public class MemberRecordUpdateFormController implements Controller
+public class MemberUpdateFormController implements Controller
 {
-	private IMemberRecord dao;
-		
-	public void setDao(IMemberRecord dao)
+	private IMemberDAO dao;
+	
+	public void setDao(IMemberDAO dao)
 	{
 		this.dao = dao;
 	}
-
+	
 	@Override
 	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
 		ModelAndView mav = new ModelAndView();
+		Member member = new Member();
+		String id =request.getParameter("id");
 		
-		//MemberRecordForm 으로 부터 수신
+		
+		try
+		{
+			member = dao.serachId(id);
+			
+			mav.addObject(member);
+			mav.setViewName("MemberUpdateForm");
+			
+		} catch (Exception e)
+		{
+			System.out.println(e.toString());
+		}
+	
 		
 		
 		return mav;
 	}
-	
 
 }

@@ -78,8 +78,17 @@
 		<property name="memberDAO" ref="memberDAO"></property>
 	</bean>
 	
-	<bean name="/logout.action" class="com.test.mvc.LogoutController">	
-		
+	<bean name="/logout.action" class="com.test.mvc.LogoutController">			
+	</bean>
+	
+	<!-- 멤버 업데이트 폼 이동 컨트롤러  -->
+	<bean name="/memberupdateform.action" class="com.test.mvc.MemberUpdateFormController">
+		<property name="dao" ref="memberDAO"></property>
+	</bean>
+	
+	<!-- 멤버 업데이트 컨트롤러  -->
+	<bean name="/memberupdate.action" class="com.test.mvc.MemberUpdateController">
+		<property name="dao" ref="memberDAO"></property>
 	</bean>
 	
 	<!--성적 수정 폼 Controller  -->

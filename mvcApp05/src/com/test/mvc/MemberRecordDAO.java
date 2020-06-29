@@ -105,6 +105,43 @@ public class MemberRecordDAO implements IMemberRecord
 		
 		return result;
 	}
+	
+	@Override
+	public MemberRecord serachId(String id) throws SQLException
+	{
+		// 결과값 반환 변수 
+		MemberRecord record = new MemberRecord();
+		
+		// 커넥션 
+		Connection conn = dataSource.getConnection();
+		
+		// 쿼리문 구성
+		String sql = "SELECT KOR,ENG,MAT,ID FROM MEMBERRECORD WHERE ID= ? ";
+		
+		// sql 실행 
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		
+		pstmt.setString(1, id);
+		
+		ResultSet rs = pstmt.executeQuery();
+		
+		while(rs.next())
+		{
+			record.setKor(rs.getInt("KOR"));
+			record.setEng(rs.getInt("ENG"));
+			record.setMat(rs.getInt("MAT"));
+			record.setId(rs.getString("ID"));
+		}
+		
+		// 연결 종료
+		rs.close();
+		pstmt.close();
+		conn.close();
+		
+		// 반환
+		return record;
+		
+	}
 }
 
 

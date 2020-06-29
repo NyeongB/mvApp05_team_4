@@ -36,6 +36,7 @@
 		{
 			
 			//alert($(this).val());
+			location.href='memberupdateform.action?id=' + $(this).val();
 			
 			
 		});
