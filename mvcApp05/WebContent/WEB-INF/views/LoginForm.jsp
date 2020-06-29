@@ -27,9 +27,33 @@ String cp = request.getContextPath();
 	{
 		$(".btnLogin").click(function()
 		{
+			$("#idErr").css("display","none");
+			$("#pwErr").css("display","none");
+			
+			
+			
+			if($("#id").val() == "")
+			{
+				//alert("아이디를 입력해주세요");
+				$("#idErr").css("display","inline");
+				$("#id").focus();
+				return
+			}
+			if($("#pw").val() == "")
+			{
+				//alert("아이디를 입력해주세요");
+				$("#pwErr").css("display","inline");
+				$("#pw").focus();
+				return
+			}
+			
 			//alert("1");
 			$("#login").submit();
+			
 		});
+		
+
+		
 	});
 	
 </script>
@@ -53,6 +77,8 @@ String cp = request.getContextPath();
 				<div class="col-sm-10">
 					<input type="text" class="form-control" id="id" name="id"
 						placeholder="아이디를 입력하세요.">
+						<br />
+					<span id="idErr" style="display : none; color:#4da9ff;">아이디를 입력해주세요.</span>
 				</div>
 			</div>
 
@@ -63,6 +89,8 @@ String cp = request.getContextPath();
 				<div class="col-sm-10">
 					<input type="password" class="form-control" id="pw" name="pw"
 						placeholder="패스워드를 입력하세요.">
+						<br />
+					<span id="pwErr" style="display : none; color:#4da9ff;">패스워드를 입력해주세요.</span>
 				</div>
 			</div>
 

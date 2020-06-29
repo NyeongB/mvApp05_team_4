@@ -44,9 +44,9 @@
 	</bean>
 	
 	<!-- 토탈 멤버 레코드 DAO -->
-	<!-- <bean id="memberRecordDAO" class="com.test.mvc.MemberRecordDAO">
+ 	<bean id="memberRecordDAO" class="com.test.mvc.MemberRecordDAO">
 		<property name ="dataSource" ref="localDataSource"></property>
-	</bean> -->
+	</bean> 
 	
 	<bean name="/membertotallist.action" class="com.test.mvc.MemberTotalListController">
 		<property name="memberDAO" ref="memberDAO"></property>
