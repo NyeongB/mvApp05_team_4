@@ -92,6 +92,10 @@ public class MemberRecordDAO implements IMemberRecord
 		int result = 0;
 		
 		String sql = "UPDATE MEMBERRECORD SET KOR = ?,ENG=?,MAT=? WHERE ID= ? ";
+		System.out.println(record.getId());
+		System.out.println(record.getKor());
+		System.out.println(record.getEng());
+		System.out.println(record.getMat());
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		pstmt.setInt(1, record.getKor());
 		pstmt.setInt(2, record.getEng());

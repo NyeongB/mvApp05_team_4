@@ -17,11 +17,16 @@
 	{
 		
 		$("#modifyBtn").click(function() 
-	{
+		{
 			//alert("확인");
-			
 			$("#recordupdateForm").submit();
-		})
+			
+		});
+		
+		$("#cancleBtn").click(function()
+		{
+			$(location).attr("href", "memberrecord.action");
+		});
 	});
 
 </script>
@@ -54,7 +59,7 @@
 										</label>
 										</div>
 										<div class="col-md-6">
-										<input type="text" class="form-control" readonly="readonly" value=${record.id }>
+										<input type="text" class="form-control" readonly="readonly" name="id" value=${record.id }>
 										</div>
 										<div class="col-md-2"></div>
 									</div>
@@ -119,7 +124,7 @@
 									<button type="button" class="btn btn-primary btn-lg btn-block" id="modifyBtn">수정</button>
 									</div>
 									<div class="col-md-4">
-									<button type="reset" class="btn btn-primary btn-lg btn-block" >취소</button>
+									<button type="reset" class="btn btn-primary btn-lg btn-block" id="cancleBtn" >취소</button>
 									</div>
 									<div class="col-md-2"></div>
 									</div>
