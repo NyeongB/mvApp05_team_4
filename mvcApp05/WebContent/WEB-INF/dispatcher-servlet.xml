@@ -37,6 +37,23 @@
 		<property name="password" value="tiger"></property>
 	</bean>
 	
+	
+	<!-- 멤버 DAO -->
+	<bean id="memberDAO" class="com.test.mvc.MemberDAO">
+		<property name ="dataSource" ref="localDataSource"></property>
+	</bean>
+	
+	<!-- 멤버 레코드 DAO -->
+	<bean id="memberRecordDAO" class="com.test.mvc.MemberRecordDAO">
+		<property name ="dataSource" ref="localDataSource"></property>
+	</bean>
+	
+	<bean name="/memberlist.action" class="com.test.mvc.MemberListController">
+		<property name="memberDAO" ref="memberDAO"></property>
+	</bean>
+	
+	
+	
 
 </beans>
 
