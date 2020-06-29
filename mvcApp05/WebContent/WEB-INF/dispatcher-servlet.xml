@@ -87,6 +87,12 @@
 		<property name="dao" ref="memberRecordDAO"></property>
 	</bean>
 
+	
+	<!-- 성적 삭제 Controller -->
+	<bean name="/memberdelete.action" class="com.test.mvc.MemberRecordDeleteController">
+		<property name="dao" ref="memberRecordDAO"></property>
+	</bean>
+
 </beans>
 
 

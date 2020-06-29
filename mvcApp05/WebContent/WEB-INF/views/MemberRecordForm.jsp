@@ -28,7 +28,7 @@
 		{
 			//alert("확인");
 			//alert($(this).val());
-			$(location).attr("href", "memberdelete.action?id=" +$(this).val());
+			$(location).attr("href", "memberdelete.action?id=" + $(this).val());
 					
 		});
 		
@@ -81,7 +81,7 @@
 								<tr>
 									<td>${member.id }</td>
 									<td>${member.name }</td>
-									<td>${member.kor }</td>
+									<td>${member.kor  }</td>
 									<td>${member.eng }</td>
 									<td>${member.mat }</td>
 									<td>${member.tot }</td>
