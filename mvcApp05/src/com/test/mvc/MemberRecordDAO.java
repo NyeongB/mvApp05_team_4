@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 import javax.sql.DataSource;
 
-public class MemberRecordDAO 
+public class MemberRecordDAO implements IMemberRecord
 {
 	private DataSource dataSource;
 
