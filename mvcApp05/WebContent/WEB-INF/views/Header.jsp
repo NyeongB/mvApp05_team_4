@@ -77,9 +77,24 @@
 				<li><a href="memberrecord.action">성적관리</a></li>
 			</ul>
 		</div>
+		
+		
+		
+		<c:choose>
+		<c:when test="${sessionScope.name == null }">
 		<div class="login">
 			<a href="login.action"><span>로그인</span></a>
 		</div>
+		</c:when>
+		
+		<c:otherwise>
+		<div class="login">
+			<a href="logout.action"><span>로그아웃</span></a>
+		</div>
+		</c:otherwise>
+		</c:choose>
+		
+		
 	
 	</div>
 
