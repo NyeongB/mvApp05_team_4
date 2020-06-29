@@ -70,6 +70,15 @@
 		<div class="logo">
 			<span>성적관리 시스템</span>
 		</div>
+		
+		<c:choose>
+		<c:when test="${sessionScope.name == null }">
+		<div class="nav">
+			
+		</div>
+		</c:when>
+		
+		<c:otherwise>
 		<div class="nav">
 			<ul class="nav_list">
 				<li><a href="membertotallist.action">전체 학생 리스트</a></li>
@@ -77,7 +86,8 @@
 				<li><a href="memberrecord.action">성적관리</a></li>
 			</ul>
 		</div>
-		
+		</c:otherwise>
+		</c:choose>
 		
 		
 		<c:choose>
