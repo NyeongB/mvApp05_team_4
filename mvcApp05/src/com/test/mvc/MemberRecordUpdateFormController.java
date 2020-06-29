@@ -8,23 +8,21 @@ import org.springframework.web.servlet.mvc.Controller;
 
 public class MemberRecordUpdateFormController implements Controller
 {
-
 	private IMemberRecord dao;
-	
-	
-	
+		
 	public void setDao(IMemberRecord dao)
 	{
 		this.dao = dao;
 	}
 
-
-
 	@Override
-	public ModelAndView handleRequest(HttpServletRequest arg0, HttpServletResponse arg1) throws Exception
+	public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception
 	{
-		// TODO Auto-generated method stub
-		return null;
+		ModelAndView mav = new ModelAndView();
+		
+		//MemberRecordForm 으로 부터 수신
+		
+		return mav;
 	}
 	
 

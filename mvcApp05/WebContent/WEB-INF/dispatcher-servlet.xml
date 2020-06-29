@@ -83,7 +83,7 @@
 	</bean>
 	
 	<!--성적 수정 폼 Controller  -->
-	<bean name="/memberrecordupdateform.action" class="com.test.MemberRecordUpdateFormController">
+	<bean name="/memberrecordupdateform.action" class="com.test.mvc.MemberRecordUpdateFormController">
 		<property name="dao" ref="memberRecordDAO"></property>
 	</bean>
 
