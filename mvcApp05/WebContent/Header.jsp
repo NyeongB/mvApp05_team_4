@@ -72,6 +72,7 @@
 		</div>
 		<div class="nav">
 			<ul class="nav_list">
+				<li><a>전체 학생 리스트</a></li>
 				<li><a>학생관리</a></li>
 				<li><a>성적관리</a></li>
 			</ul>
