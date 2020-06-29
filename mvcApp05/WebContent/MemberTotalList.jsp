@@ -25,33 +25,48 @@
 	
 	<div class="content">
 	
-		<table class="table table-striped">
-			<tr>
-				<th>아이디</th>
-				<th>패스워드</th>
-				<th>이름</th>
-				<th>전화번호</th>
-				<th>이메일</th>
-				<th>국어점수</th>
-				<th>영어점수</th>
-				<th>수학점수</th>
-				<th>총점</th>
-				<th>평균</th>
-			</tr>
-			<tr>
-				<td>superman</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
 	
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-2">
+						</div>
+						<div class="col-md-8">
+							<table class="table table-striped">
+								<tr>
+									<th>아이디</th>
+									<th>패스워드</th>
+									<th>이름</th>
+									<th>전화번호</th>
+									<th>이메일</th>
+									<th>국어점수</th>
+									<th>영어점수</th>
+									<th>수학점수</th>
+									<th>총점</th>
+									<th>평균</th>
+								</tr>
+								<tr>
+									<td>superman</td>
+									<td>*******</td>
+									<td>김동휘</td>
+									<td>010-2370-5421</td>
+									<td>dnehd1828@gmail.com</td>
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									<td>300</td>
+									<td>100</td>
+								</tr>
+							</table>
+											
+						</div>
+						<div class="col-md-2">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
 	
 	</div>
 	
