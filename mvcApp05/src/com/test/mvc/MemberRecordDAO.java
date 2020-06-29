@@ -74,7 +74,7 @@ public class MemberRecordDAO implements IMemberRecord
 		Connection conn = dataSource.getConnection();
 		int result = 0;
 		
-		String sql = "DELETE FROM MEMBERRECORD WHERE ID= ?";
+		String sql = "UPDATE MEMBERRECORD SET KOR =0, ENG =0, MAT =0 WHERE ID = ?";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		pstmt.setString(1, id);
 		result = pstmt.executeUpdate();

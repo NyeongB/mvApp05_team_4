@@ -42,10 +42,30 @@ public class MemberDAO implements IMemberDAO
 			member.setName(rs.getString("NAME"));
 			member.setTel(rs.getString("TEL"));
 			member.setEmail(rs.getString("EMAIL"));
-			member.setKor(Integer.parseInt(rs.getString("KOR")));
+			
+			if(rs.getString("KOR")==null)
+			{member.setKor(0);}
+			else
+			{member.setKor(Integer.parseInt(rs.getString("KOR")));}
+			
+			if(rs.getString("ENG")==null)
+			member.setEng(0);
+			else
 			member.setEng(Integer.parseInt(rs.getString("ENG")));
+			
+			if(rs.getString("MAT")==null)
+			member.setMat(0);
+			else
 			member.setMat(Integer.parseInt(rs.getString("MAT")));
+			
+			if(rs.getString("TOT")==null)
+			member.setTot(0);
+			else
 			member.setTot(Integer.parseInt(rs.getString("TOT")));
+			
+			if(rs.getString("AVG")==null)
+			member.setAvg(0);
+			else
 			member.setAvg(Double.parseDouble(rs.getString("AVG")));
 			
 			result.add(member);

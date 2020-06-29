@@ -24,7 +24,7 @@
 			
 		});
 		
-		$(".recordDelete").click(function() 
+		$(".recordDelete").click(function()
 		{
 			//alert("확인");
 			//alert($(this).val());

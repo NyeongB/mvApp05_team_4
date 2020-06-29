@@ -28,6 +28,7 @@ public class MemberRecordDeleteController implements Controller
 		ModelAndView mav = new ModelAndView();
 		
 		String id = request.getParameter("id");
+		System.out.println(id);
 		
 		/*
 		 * HttpSession session = request.getSession();
